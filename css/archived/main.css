@@ -1,0 +1,441 @@
+/* HEADER */
+	header {
+		background-color: #000;
+		margin-bottom: 25px;
+		padding: 1rem;
+		grid-area: hd;
+	}
+	
+	.logo {
+		padding-right: 1rem;
+		padding-top: 1.5em;
+		height: 3rem;
+		float: left;
+		width: 3rem;
+	}
+
+	img, .video {
+		margin: 1.5rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		max-width:60vw;
+	}
+	
+	img:not(.noborder) {
+		border: 1px solid #999;
+	}
+	
+	video:not(.noborder) {
+		border: 1px solid #999;
+	}
+	
+	figure {
+		text-align: center;
+	}
+	
+	.bordered {
+		display: block;
+		margin: 1em 0;
+		border-top: 1px solid #CCC;
+		border-bottom: 1px solid #CCC;
+		padding: .5em 0;
+	}	
+		
+	/* Used on the index page for my photo */
+	
+	.curve { 
+		width: 20%; height: auto;
+		float: right;
+		margin: 3rem 0rem 3rem 1.5rem;
+		border-radius: 50%;
+		overflow-wrap: word-break;
+		-webkit-shape-outside: circle();
+		shape-outside: circle();
+	}
+
+	.rect { 
+		width: 40%; height: auto;
+		float: right;
+		margin: 0 0 1rem 1rem;
+		overflow-wrap: word-break;
+	}
+	
+	.justify {
+		text-align:justify;
+	}
+	
+	nav {
+		color: #888;
+		padding: .2em 0 0 0;
+	}
+
+	nav a {
+		color: #DDD;
+		padding: 0 .1em 0 .1em;
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		color: #0099CC;
+		transition: color .5s;
+	}
+
+/* MAIN SECTION */
+	main {
+		background-color: #EFEFEF;
+		grid-area: mn;
+	}
+
+	main h2, article h2 {
+		color: #999;
+	}
+
+	main p {
+		margin-bottom: .5em;
+	}
+	
+	article {
+		padding-bottom: .5rem;
+	}
+	
+/* SUBHEADER */
+	#subNav {
+		grid-area: sA;
+	}
+
+	.sec_nav {
+		padding-bottom: .3em;
+		color: #222;
+		float: right;
+	}
+	
+	.sep {
+		padding-left: .2em;
+		padding-right: .2em;
+	}
+	
+	.sec_nav a {
+		text-decoration: none;
+		color: #DDD;
+		cursor: url(hand.cur), pointer;
+	}	
+
+	.sec_nav a:hover {
+		color: #222;
+	}
+	
+	/*Float some of the secondary nav (the primary things) to the left */
+	.left {
+		float:left;
+	}
+	
+	.item {
+		padding: 0 .1em;
+	}
+		
+/* FORMATTING FOR COMPLETION MARKERS */
+	.marker {
+	margin-left: .5em;
+	border-radius: .3em;
+	}
+	
+	.complete {
+		color: #004400;
+		background-color: #00EE00;
+	}
+
+	.partial {
+		color: #333333;
+		background-color: #FFD700;
+	}
+
+	.incomplete {
+		color: #FFEEFF;
+		background-color: #EE0000;
+	}
+
+/* TABLE FORMATTING */
+	td {
+		font-family: monospace;
+		font-size: 1.2em;
+		padding: 2px 10px 2px 10px;
+		background-color: #FFFFFF;
+	}
+
+	td.top {
+		background-color: #CCC;
+	}
+
+/* Extra PADDING/MARGINS */
+	.section_padding {
+		padding: .8em 1.5em .5em 1.5em;
+	}	
+	
+	.rounded {
+		border-radius: .5em .5em 0 0;
+	}
+	
+	/* Used to make the margin less for the first item in a section */
+	.top {
+		margin-top: 0.2em;
+	}
+	
+/* Used for code inserted in text */
+	pre {
+		overflow: auto;
+	}
+
+	code {
+		display:block;
+		font-family: "Courier New", "Courier", monospaced;
+		border-radius: .5em;
+	}
+
+	code:not(.inline) {
+		margin: 0 .5em 1em .5em;
+		padding: .5em 1em;
+	}
+	
+	.comment {
+		color: #000;
+	}
+	
+	.inline {
+		padding: 0 .5em;
+	}
+	
+	.html {
+		background-color: #CDCDCD;
+	}
+	
+	.cmd {
+		background-color: #344;
+		color: #DDD;
+	}
+	
+	.root {
+		color: #00FF00;
+	}
+	
+	.code_inline {
+		margin: 0;
+	}
+	
+	.highlight {
+		background-color: #CCC;
+		border-radius: 4px;
+		padding: 0 .4em 0 .4em;
+	}
+	
+	.quote {
+		font-size: .85em;
+		color: #CCC;
+		background-color: #666;
+		padding: 20px;
+		margin: 0;
+		padding-bottom: 1em;
+	}
+	
+/* Image floating */
+	.floater {
+		float: left;
+	}
+
+	.floater.end {
+		clear: right;
+	}
+
+	.pushDown {
+		clear:both;
+	}
+
+/* List floating */
+	.ref {
+		font-size: .85em;
+		color: #333;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		padding-bottom: 1em;
+	}
+
+	li {
+		padding: .3em 0;
+	}
+	
+	.loweralpha {
+		list-style-type: lower-alpha;
+	}
+	
+	.roman {
+		list-style-type: lower-roman;
+	}
+	
+	.square {
+		list-style-type: square;
+	}
+
+/* Text / link formatting */
+	.in_text_link {
+		text-decoration: none;
+		color: #0099CC;
+		cursor: url(hand.cur), pointer;
+	}
+
+	.in_text_link:hover, .licence_link:hover {
+		color: #222;
+	}
+
+	.licence_link {
+		text-decoration: none;
+		color: #CCC;
+	}
+
+/* FOOTER SECTION */
+	footer, .subheader {
+		background-color: #0099CC;
+		color: #DDD;
+	}
+
+	footer {
+		border-radius: .5em;
+		margin-bottom: 5vh;
+		grid-area: ft;
+		padding: 1em 1.5em 1em 1.5em;
+	}
+
+/* ----------- BREAKPOINTS ----------- */
+	.grid {
+		margin:0;
+		display: grid;
+		grid-template-rows: auto;
+		grid-gap: 0;
+	}
+
+/* ----------- Phone P ----------- */
+@media screen and (max-width:499px) {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"hd hd hd"
+			"sA sA sA"
+			"mn mn mn"
+			"ft ft ft";
+	}
+
+	footer, .rounded {
+		border-radius: 0;
+	}
+	
+	nav, #photo-box {
+		display: none;
+	}
+	
+	.sec_nav {
+		float:left;
+	}
+}
+
+/* ----------- Tablet Portrait ----------- */
+@media screen and (min-width:500px) {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"hd hd hd"
+			"sA sA sA"
+			"as as as"
+			"mn mn mn"
+			"ft ft ft";
+	}
+
+	.video {
+		height:180px;
+	}
+	
+	footer, .rounded {
+		border-radius: 0;
+	}
+}
+
+/* ----------- Tablet Landscape ----------- */
+@media screen and (min-width:900px) {
+	.grid {
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-areas:
+			"hd hd hd hd hd hd hd"
+			". sA sA sA sA sA ."
+			". mn mn mn mn mn ."
+			". mn mn mn mn mn ."
+			". ft ft ft ft ft .";
+	}
+
+	header {
+	  padding-left: 14.3vw;
+	}
+
+/* Pull the video height to 360px (full height) */	
+	.video {
+		height:360px;
+	}
+	
+	.rounded {
+		border-radius: .5em .5em 0 0;
+	}
+	
+	footer {
+	  border-radius: 0 0 .5em .5em;
+	}
+}
+
+/* ----------- Desktops and laptops ----------- */
+@media only screen  and (min-width : 1200px) {
+	.grid {
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-areas:
+			"hd hd hd hd hd hd hd"
+			". sA sA sA sA sA ."
+			". mn mn mn mn mn ."
+			". mn mn mn mn mn ."
+			". ft ft ft ft ft .";
+	}
+
+	header {
+	  padding-left: 14.3vw;
+	}
+	
+	.rounded {
+		border-radius: .5em .5em 0 0;
+	}
+	
+	footer {
+	  border-radius: 0 0 .5em .5em;
+	}
+}
+
+/* ----------- Large screens ----------- */
+@media only screen  and (min-width : 1800px) {
+	.grid {
+		grid-template-columns: repeat(9, 1fr);
+		grid-template-areas:
+			"hd hd hd hd hd hd hd hd hd"
+			". . sA sA sA sA sA . ."
+			". . mn mn mn mn mn . ."
+			". . mn mn mn mn mn . ."
+			". . ft ft ft ft ft . .";
+	}
+
+	header {
+	  padding-left: 22.22vw;
+	}
+
+	.rounded {
+		border-radius: .5em .5em 0 0;
+	}
+	
+	footer {
+	  border-radius: 0 0 .5em .5em;
+	}
+}
+	
+	

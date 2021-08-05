@@ -1,0 +1,500 @@
+/* HEADER */
+	header {
+		background-color: #FFF;
+		border: 2px solid #DDD; /*border*/
+		padding: 1em .75em;
+		grid-area: hd;
+		font-family: 'Poppins', sans-serif;
+		font-size: 2rem;
+	}
+	
+	header h5 {
+	    color: #CCC;	
+	}
+	
+	.logo {
+		padding-right: 1rem;
+		padding-top: 1.5em;
+		height: 2.9rem;
+		width: 2.9rem;
+		float: left;
+	}
+	
+	.button_icon {
+		padding-right: 1rem;
+		height: 1.2rem;
+		width: 1.2rem;
+		float: left;
+	}
+
+/* IMAGES */
+	img, .video {
+		margin: 1.5rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		max-width:60vw;
+	}
+	
+	img:not(.noborder) {
+		border: 1px solid #999;
+	}
+	
+	video:not(.noborder) {
+		border: 1px solid #999;
+	}
+	
+	figure {
+		text-align: center;
+	}
+
+/* Used for the 'Back to the Top' links */
+	.bordered {
+		display: block;
+		margin: 2em -1.5em 1.5em -1.5em;
+		background-color:#DDD;
+		padding: .5em 1.5em;
+	}
+
+    .title {
+		color: #EEE;
+		margin: -1.1em;
+		padding: 1em 1.1em;
+    }
+
+	.section {
+		background-color:#333;
+	}
+	
+	.part {
+		background-color:#999;
+	}
+			
+	.justify {
+		text-align:justify;
+	}
+
+/* Top Navigation bar - under the title */	
+	nav {
+		color: #888;
+		padding: .2em 0 0 0;
+	}
+
+	nav a {
+		color: #FFF;
+		padding: 0 .1em 0 .1em;
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		color: #222;
+		font-weight: 600;
+		transition: color 1s;
+	}
+
+/* MAIN SECTION */
+	main {
+		background-color: #FAFAFA;
+		border: 2px solid #DDD; /*border*/
+		grid-area: mn;
+	}
+
+	main p {
+		margin-bottom: .5em;
+	}
+	
+	h4 {
+		color: #CCC;
+		margin:0;
+		margin-top:2em;
+		padding-bottom: .5em;
+	}
+	
+	article {
+		padding-bottom: 0rem;
+	}
+	
+/* SUBHEADER */
+	#subNav {
+		grid-area: sA;
+	}
+
+	.sec_nav {
+		font-size: 1.1em;
+		padding-bottom: .3em;
+		color: #222;
+		float: right;
+	}
+	
+	.sep {
+		padding-left: .2em;
+		padding-right: .2em;
+	}
+	
+	.sec_nav a {
+		font-weight:400;
+		text-decoration: none;
+		color: #333;
+		cursor: url(hand.cur), pointer;
+	}	
+
+	.sec_nav a:hover {
+		color: #111;
+		font-weight: 600;
+		transition: color .5s;
+	}
+	
+	/*Float some of the secondary nav (the primary things) to the left */
+	.left {
+		float:left;
+	}
+	
+	.item {
+		padding: 0 .1em;
+	}
+		
+/* FORMATTING FOR COMPLETION MARKERS */
+	.marker {
+		margin-left: .5em;
+		border-radius: .3em;
+	}
+	
+	.complete {
+		color: #004400;
+		background-color: #00EE00;
+	}
+
+	.partial {
+		color: #333333;
+		background-color: #FFD700;
+	}
+
+	.incomplete {
+		color: #FFEEFF;
+		background-color: #EE0000;
+	}
+
+/* TABLE FORMATTING */
+	td {
+		font-family: monospace;
+		font-size: 1.2em;
+		padding: 2px 10px 2px 10px;
+		background-color: #FFFFFF;
+	}
+
+	td.top {
+		background-color: #DDD;
+	}
+
+/* Extra PADDING/MARGINS */
+	.section_padding {
+		padding: .8em 1.5em .5em 1.5em;
+	}	
+	
+	.rounded {
+		/* border-radius: .5em .5em 0 0;*/
+	}
+	
+	/* Used to make the margin less for the first item in a section */
+	.top {
+		margin-top: 0.3em;
+		margin-bottom: 0.7em;
+	}
+	
+/* Used for code inserted in text */
+	pre {
+		overflow: auto;
+	}
+
+	code {
+		display:inline-block;
+		font-family: "Courier New", "Courier", monospaced;
+		border-radius: .5em;
+	}
+
+	code:not(.inline) {
+		margin: .5em .5em 1em .5em;
+		padding: .5em 1em;
+	}
+	
+	.comment {
+		color: #000;
+	}
+	
+	.inline {
+		padding: 0 .5em;
+	}
+	
+	.html {
+		background-color: #EFEFEF;
+	}
+	
+	.button_link {
+	    text-decoration: none;
+		color: #FFF;
+	}
+	
+	.button {
+		border: 0;
+		border-radius:.25rem;
+		
+		background: #F53;
+		color:#000;
+		text-decoration: none;
+		cursor: url(hand.cur), pointer;
+		
+		float: left;
+		
+		font-size: 1rem;
+		line-height: 1.2;
+		
+		padding: 0.25rem 0.5rem;
+		margin: 0.25rem 0.5rem 0 0;
+	}
+	
+	.button:hover {
+		color: #CDCDCD;
+		background: #000;
+	}
+	
+	.cmd {
+		background-color: #000;
+		color: #FFF;
+	}
+	
+	.root {
+		color: #009900;
+	}
+	
+	.code_inline {
+		margin: 0;
+	}
+	
+	.quote {
+		font-size: .85em;
+		color: #DDD;
+		background-color: #666;
+		padding: 20px;
+		margin: 0;
+		padding-bottom: 1em;
+	}
+	
+/* Image floating */
+	.floater {
+		float: left;
+	}
+
+	.floater.end {
+		clear: right;
+	}
+
+	.pushDown {
+		clear:both;
+	}
+
+/* List floating */
+	.ref {
+		font-size: .85em;
+		color: #333;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		padding-bottom: 1em;
+	}
+
+	li {
+		padding: .3em 0;
+	}
+	
+	.loweralpha {
+		list-style-type: lower-alpha;
+	}
+	
+	.roman {
+		list-style-type: lower-roman;
+	}
+	
+	.square {
+		list-style-type: square;
+	}
+
+/* Text / link formatting */
+	.in_text_link {
+		text-decoration: none;
+		color: #F53;
+		cursor: url(hand.cur), pointer;
+	}
+
+	.licence_link {
+		text-decoration: none;
+		color: #222;
+	}
+
+	.licence_link:visited {
+		text-decoration: none;
+		color: #222;
+	}
+	
+	.in_text_link:hover, .licence_link:hover {
+		font-weight: 600;
+		color: #222;
+	}
+
+	.up_arrow {
+		color: #222;
+	}
+	
+/* FOOTER SECTION */
+	footer, .subheader {
+		background-color: #DDD; /* #00a4bb; */
+		color: #222;
+		border-left: 2px solid #DDD; /*border*/
+		border-right: 2px solid #DDD; /*border*/
+	}
+	
+	.copy {
+		color: #222;
+	}
+	
+	footer {
+		grid-area: ft;
+		padding: 1em 1.5em;
+		border-bottom: 2px solid #DDD; /*border*/
+	}
+
+/* ****************************************************************************************************************** */
+
+/* ----------- BREAKPOINTS ----------- */
+	.grid {
+		margin:0;
+		display: grid;
+		grid-template-rows: auto;
+		grid-gap: 0;
+	}
+
+/* ****************************************************************************************************************** */
+
+/* ----------- Phone P ----------- */
+@media screen and (max-width:499px) {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"hd hd hd"
+			"sA sA sA"
+			"mn mn mn"
+			"ft ft ft";
+	}
+
+	footer, .rounded {
+		border-radius: 0;
+		margin: 0;
+	}
+	
+	nav, #photo-box {
+		display: none;
+	}
+	
+	.sec_nav {
+		float:left;
+	}
+	
+	h1 {
+		font-size: 1em;
+	}
+	
+	header {
+		border-radius: 0;
+	}
+}
+
+/* ****************************************************************************************************************** */
+
+/* ----------- Tablet Portrait ----------- */
+@media screen and (min-width:500px) {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"hd hd hd"
+			"sA sA sA"
+			"as as as"
+			"mn mn mn"
+			"ft ft ft";
+	}
+
+	.video {
+		height:180px;
+	}
+	
+	footer, .rounded {
+		border-radius: 0;
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+	
+	header {
+		margin-top:0;
+		border-radius: 0;
+	}
+}
+
+/* ****************************************************************************************************************** */
+
+/* ----------- Tablet Landscape ----------- */
+@media screen and (min-width:900px) {
+	.grid {
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-areas:
+			". hd hd hd hd hd ."
+			". sA sA sA sA sA ."
+			". mn mn mn mn mn ."
+			". mn mn mn mn mn ."
+			". ft ft ft ft ft .";
+	}
+
+
+/* Pull the video height to 360px (full height) */	
+	.video {
+		height:360px;
+	}
+	
+	header {
+		margin-top:5vh;
+		border-radius: 0 /*1em 1em 0 0 */;
+	}
+	
+	footer {
+		margin-bottom: 5vh;
+		/*border-radius: 0 0 1em 1em;*/
+	}
+}
+
+/* ****************************************************************************************************************** */
+
+/* ----------- Desktops and laptops ----------- */
+@media only screen  and (min-width : 1200px) {
+	.grid {
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-areas:
+			". hd hd hd hd hd ."
+			". sA sA sA sA sA ."
+			". mn mn mn mn mn ."
+			". mn mn mn mn mn ."
+			". ft ft ft ft ft .";
+	}
+
+	header {
+		margin-top:5vh;
+		border-radius: 0 /*1em 1em 0 0 */;
+	}
+	
+	footer {
+		margin-bottom: 5vh;
+		/*border-radius: 0 0 1em 1em;*/
+	}
+}
+
+/* ****************************************************************************************************************** */
+	

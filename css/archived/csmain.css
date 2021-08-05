@@ -1,0 +1,438 @@
+/* HEADER */
+	header {
+		background-color: #000;
+		padding: 1.5rem;
+		grid-area: hd;
+	}
+	
+	.logo {
+		padding-right: 1rem;
+		padding-top: 1.5em;
+		height: 2.9rem;
+		width: 2.9rem;
+		float: left;
+	}
+
+/* IMAGES */
+	img, .video {
+		margin: 1.5rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		max-width:60vw;
+	}
+	
+	img:not(.noborder) {
+		border: 1px solid #999;
+	}
+	
+	video:not(.noborder) {
+		border: 1px solid #999;
+	}
+	
+	figure {
+		text-align: center;
+	}
+
+/* Used for the 'Back to the Top' links */
+	.bordered {
+		display: block;
+		margin: 1em 0;
+		border-top: 1px solid #CCC;
+		border-bottom: 1px solid #CCC;
+		padding: .5em 0;
+	}	
+			
+	.justify {
+		text-align:justify;
+	}
+
+/* Top Navigation bar - under the title */	
+	nav {
+		color: #888;
+		padding: .2em 0 0 0;
+	}
+
+	nav a {
+		color: #FFF;
+		padding: 0 .1em 0 .1em;
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		color: #00a4bb;
+		transition: color .5s;
+	}
+
+/* MAIN SECTION */
+	main {
+		background-color: #EFEFEF;
+		grid-area: mn;
+	}
+
+	main h2, article h2 {
+		color: #999;
+	}
+
+	main p {
+		margin-bottom: .5em;
+	}
+	
+	h4 {
+		margin:0;
+		margin-top:2em;
+		padding-bottom: .5em;
+	}
+	
+	article {
+		padding-bottom: .5rem;
+	}
+	
+/* SUBHEADER */
+	#subNav {
+		grid-area: sA;
+	}
+
+	.sec_nav {
+		padding-bottom: .3em;
+		color: #222;
+		float: right;
+	}
+	
+	.sep {
+		padding-left: .2em;
+		padding-right: .2em;
+	}
+	
+	.sec_nav a {
+		text-decoration: none;
+		color: #DDD;
+		cursor: url(hand.cur), pointer;
+	}	
+
+	.sec_nav a:hover {
+		color: #222;
+	}
+	
+	/*Float some of the secondary nav (the primary things) to the left */
+	.left {
+		float:left;
+	}
+	
+	.item {
+		padding: 0 .1em;
+	}
+		
+/* FORMATTING FOR COMPLETION MARKERS */
+	.marker {
+	margin-left: .5em;
+	border-radius: .3em;
+	}
+	
+	.complete {
+		color: #004400;
+		background-color: #00EE00;
+	}
+
+	.partial {
+		color: #333333;
+		background-color: #FFD700;
+	}
+
+	.incomplete {
+		color: #FFEEFF;
+		background-color: #EE0000;
+	}
+
+/* TABLE FORMATTING */
+	td {
+		font-family: monospace;
+		font-size: 1.2em;
+		padding: 2px 10px 2px 10px;
+		background-color: #FFFFFF;
+	}
+
+	td.top {
+		background-color: #CCC;
+	}
+
+/* Extra PADDING/MARGINS */
+	.section_padding {
+		padding: .8em 1.5em .5em 1.5em;
+	}	
+	
+	.rounded {
+		/* border-radius: .5em .5em 0 0;*/
+	}
+	
+	/* Used to make the margin less for the first item in a section */
+	.top {
+		margin-top: 0.2em;
+	}
+	
+/* Used for code inserted in text */
+	pre {
+		overflow: auto;
+	}
+
+	code {
+		display:inline-block;
+		font-family: "Courier New", "Courier", monospaced;
+		border-radius: .5em;
+	}
+
+	code:not(.inline) {
+		margin: .5em .5em 1em .5em;
+		padding: .5em 1em;
+	}
+	
+	.comment {
+		color: #000;
+	}
+	
+	.inline {
+		padding: 0 .5em;
+	}
+	
+	.html {
+		background-color: #EFEFEF;
+	}
+	
+	.button {
+		background-color:#CDCDCD;
+		border-radius:.5em;
+		color:#000;
+		text-decoration: none;
+		cursor: url(hand.cur), pointer;
+		float: right;
+	}
+	
+	.button:hover {
+		color: #CDCDCD;
+		background-color: #000;
+	}
+	
+	.cmd {
+		background-color: #000;
+		color: #FFF;
+	}
+	
+	.root {
+		color: #009900;
+	}
+	
+	.code_inline {
+		margin: 0;
+	}
+	
+	.quote {
+		font-size: .85em;
+		color: #CCC;
+		background-color: #666;
+		padding: 20px;
+		margin: 0;
+		padding-bottom: 1em;
+	}
+	
+/* Image floating */
+	.floater {
+		float: left;
+	}
+
+	.floater.end {
+		clear: right;
+	}
+
+	.pushDown {
+		clear:both;
+	}
+
+/* List floating */
+	.ref {
+		font-size: .85em;
+		color: #333;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		padding-bottom: 1em;
+	}
+
+	li {
+		padding: .3em 0;
+	}
+	
+	.loweralpha {
+		list-style-type: lower-alpha;
+	}
+	
+	.roman {
+		list-style-type: lower-roman;
+	}
+	
+	.square {
+		list-style-type: square;
+	}
+
+/* Text / link formatting */
+	.in_text_link {
+		text-decoration: none;
+		color: #00a4bb;
+		cursor: url(hand.cur), pointer;
+	}
+
+	.in_text_link:hover, .licence_link:hover {
+		color: #222;
+	}
+
+	.licence_link {
+		text-decoration: none;
+		color: #CCC;
+	}
+
+/* FOOTER SECTION */
+	footer, .subheader {
+		background-color: #777; /* #00a4bb; */
+		color: #DDD;
+	}
+	
+	.copy {
+		color: #DDD;
+	}
+	
+	footer {
+		grid-area: ft;
+		padding: 1em 1.5em 1em 1.5em;
+	}
+
+/* ****************************************************************************************************************** */
+
+/* ----------- BREAKPOINTS ----------- */
+	.grid {
+		margin:0;
+		display: grid;
+		grid-template-rows: auto;
+		grid-gap: 0;
+	}
+
+/* ****************************************************************************************************************** */
+
+/* ----------- Phone P ----------- */
+@media screen and (max-width:499px) {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"hd hd hd"
+			"sA sA sA"
+			"mn mn mn"
+			"ft ft ft";
+	}
+
+	footer, .rounded {
+		border-radius: 0;
+		margin: 0;
+	}
+	
+	nav, #photo-box {
+		display: none;
+	}
+	
+	.sec_nav {
+		float:left;
+	}
+	
+	h1 {
+		font-size: 1em;
+	}
+	
+	header {
+		border-radius: 0;
+	}
+}
+
+/* ****************************************************************************************************************** */
+
+/* ----------- Tablet Portrait ----------- */
+@media screen and (min-width:500px) {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"hd hd hd"
+			"sA sA sA"
+			"as as as"
+			"mn mn mn"
+			"ft ft ft";
+	}
+
+	.video {
+		height:180px;
+	}
+	
+	footer, .rounded {
+		border-radius: 0;
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+	
+	header {
+		margin-top:0;
+		border-radius: 0;
+	}
+}
+
+/* ****************************************************************************************************************** */
+
+/* ----------- Tablet Landscape ----------- */
+@media screen and (min-width:900px) {
+	.grid {
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-areas:
+			". hd hd hd hd hd ."
+			". sA sA sA sA sA ."
+			". mn mn mn mn mn ."
+			". mn mn mn mn mn ."
+			". ft ft ft ft ft .";
+	}
+
+
+/* Pull the video height to 360px (full height) */	
+	.video {
+		height:360px;
+	}
+	
+	header {
+		margin-top:5vh;
+	}
+	
+	footer {
+		margin-bottom: 5vh;
+	}
+}
+
+/* ****************************************************************************************************************** */
+
+/* ----------- Desktops and laptops ----------- */
+@media only screen  and (min-width : 1200px) {
+	.grid {
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-areas:
+			". hd hd hd hd hd ."
+			". sA sA sA sA sA ."
+			". mn mn mn mn mn ."
+			". mn mn mn mn mn ."
+			". ft ft ft ft ft .";
+	}
+
+	header {
+		margin-top:5vh;
+	}
+	
+	footer {
+		margin-bottom: 5vh;
+	}
+}
+
+/* ****************************************************************************************************************** */
+	

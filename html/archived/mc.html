@@ -1,0 +1,141 @@
+<!DOCTYPE html5>
+
+<html>
+	<head>
+		<title>Michael Edwards' FabLab 2018 Homepage</title>
+		<!-- meta viewport controls width and scaling. User scaling not disabled for accessability -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+	</head>
+
+	<body id="top_of_the_page">
+	<canvas id="bckgrd"></canvas>
+	<script src="./js/bubbles.js"></script>
+
+		<div class="grid">
+		<header>
+			<h1>mchl</h1>
+				<nav>
+					
+				</nav>
+		</header>
+
+		<div class="subheader section_padding rounded" id="subNav">
+			<div class="sec_nav left">
+				<a class="item" href="./index.html">Home</a> <span class="sep">|</span>
+				<a class="item" href="./html/mc.html">Monday Club</a> <span class="sep">|</span>
+				<a class="item" href="./html/fdb.html">FDB</a>
+			</div>
+			<!-- <div class="sec_nav">
+			    <a class="item" href="./html/final_project.html">Final Project</a> <span class="sep">|</span>
+				<a class="item" href="./html/01.html">First Week</a> 
+			</div> -->
+		</div>
+		
+		<main class="section_padding">
+			<article>
+
+			<h2 class="top">Notes from Monday Club</h2>
+				<h3>MC01: Installing Vue</h3>
+				<p class="justify">
+					Context: The aim of Monday Club is to develop some apps, learning some new code in the process and spending some time with my friend on a productive project. The initial testing app is called 'app-1'.
+					Today I installed the software I need. The installation on Windows 10 ran into issues (I think they are related to user permissions/path, I will revisit them when I have time). I switched to Linux Ubuntu 20.04 and the install took about 10 minutes.					
+				</p>
+<pre><code class="cmd"># Install nodejs
+<span class="root">$ </span> curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+<span class="root">$ </span> sudo apt-get install -y nodejs
+					
+# Install vue using npm (node package manager)
+<span class="root">$ </span> sudo npm install -g @vue/cli
+					
+# navigate to project folder and clone project
+<span class="root">$ </span> cd ~/projects/web/
+<span class="root">$ </span> git clone %url/app_name%
+<span class="root">$ </span> cd %app_name%
+					
+# download and install dependencies
+<span class="root">$ </span> npm install
+
+# start the server
+<span class="root">$ </span> npm run serve
+</code></pre>
+				
+				Once the server is running, it will display the IP address and port required for access.<br>
+				In my particular setup I'm going to run a development server that holds all my the repositories. I'll access it over SSH from whatever machine I am using.<br>
+<pre><code class="cmd"># install openssh if required
+<span class="root">$ </span> sudo apt-get install openssh-server
+
+# check the process is running after install (look for sshd process)
+<span class="root">$ </span> ps aux | grep sshd
+
+# any problems, then restart it
+<span class="root">$ </span> /etc/init.d/sshd restart
+</code></pre>
+			
+				<h2 id="what">What is a Fab Lab and the Fab Academy?</h2>
+				<h3>Fab Labs</h3>
+					<p>
+						A fab lab (fabrication laboratory) is a workspace equipped with a selection of tools offering various methods of digital fabrication. The aim is to be able to 'make (almost) anything' (Gershenfeld, 2005). The concept began as an outreach project from MIT's Center for Bits and Atoms (CBA), with the first lab opening in India. There is now a network of over 1000 fab labs all around the world.
+					</p>
+					<p>
+						The fab lab at the University of Brighton (styled as FabLabBTN) has four major machines: 
+						<ol>
+						<li>an Epilog Helix laser cutter</li>
+						<li>a Roland MDX-50 CNC mill</li>
+						<li>a Roland CAMM-1 GX-24 vinyl cutter</li>
+						<li>a Creality CR-10 Mini 3D printer</li>
+						</ol>
+						The lab is also equipped with a wide selection of hand tools, some power tools and a soldering station. The lab is based in the Heavy Engineering building at the University of Brighton and fab lab students can arrange access to a plasma cutter, a larger CNC for bigger wood projects, a drill press and various lathes.
+					</p>
+					<p>
+						While I have listed individual machines here, the fab lab should be considered a machine.
+					</p>
+				<h3>Fab Academy</h3>
+					<p>
+						The Fab Academy program is a fast paced, project-based exploration of making things with the tools in the fab lab. It is how the fab lab network trains instructors. The learning is distributed, as opposed to distance: The tools and processes are introduced in a weekly global lecture (14:00 GMT) delivered centrally (normally by Neil Gershenfeld) and then the local lab provides support and tuition. The rest is self-motivated exploration of the topic for the week. See the list of <a href="#weekly" class="in_text_link">weekly tasks</a> to get an idea of the schedule. The weekly project assignments are compulsory, but the complexity of the outcome is variable and unprescribed past a certain base level of understanding. This approach leads to a lot of different ideas and outcomes, very different from the nearly identical products of a step-by-step tutorial. It is a learning approach that I really enjoy.
+					</p>
+
+
+				<h3>Links</h3>
+				<p>Find out more about the Fab Foundation and the other Fab projects at the Fab Foundation website:
+					<br>
+				<a class="in_text_link" target="_blank" rel="noopener" href="http://www.fabfoundation.org/">Fab Foundation</a>
+				</p>
+				<p>Have a look at the current schedule and the student archive:
+					<br>
+				<a class="in_text_link" target="_blank" rel="noopener" href="http://fab.academany.org/2019/schedule.html">Fab Academy 2019 Schedule</a>
+					<br>
+				<a class="in_text_link" target="_blank" rel="noopener" href="http://archive.fabacademy.org/">Fab Academy Archive</a>
+				</p>
+				
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>
+				<h2 id="references">References</h2>
+				<h3>Offline</h3>
+				<ul class="ref">
+					<li>
+						Gershenfeld, Neil A. (2005). <i>Fab: the coming revolution on your desktop—from personal computers to personal fabrication.</i> New York: Basic Books. ISBN 0-465-02745-8.
+					</li>
+				</ul>
+			</article>
+		</main>
+		
+		<footer>
+			<span id="footer_text">This work is licensed under a <a target="_blank" rel="noopener" class="licence_link" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span>
+			<br><br>
+					<div class="sec_nav left">
+					&copy; 2019 Michael Edwards
+				</div>
+				<div class="sec_nav">
+					<a class="item" href="#top_of_the_page">Top</a> <span class="sep">|</span>
+					<a class="item" href="./index.html">Home</a> <span class="sep">|</span>					
+					<a class="item" href="./html/about_me.html">About Me</a> <span class="sep">|</span>
+					<a class="item" href="./html/links.html">Links</a>
+				</div>
+		</footer>
+	</div>
+
+	</body>
+</html>

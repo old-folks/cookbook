@@ -1,0 +1,388 @@
+<!DOCTYPE html5>
+
+<html>
+	<head>
+		<title>MCHL: Food</title>
+		<!-- meta viewport controls width and scaling. User scaling not disabled for accessability -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<!-- external links -->
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./css/csnormalize.css">
+		<link rel="stylesheet" type="text/css" href="./css/csmain_white.css">
+	</head>
+	
+	<body id="top_of_the_page">
+	<canvas id="bckgrd"></canvas>
+	<script src="./js/bubbles.js"></script>
+	
+		<div class="grid">
+		<header>
+		    <h2>MCHL</h2>
+		</header>
+
+		<div class="subheader section_padding" id="subNav">
+			<div class="sec_nav left">
+				<a class="item" href="./index.html">Home</a> <span class="sep">|</span>
+				<a class="item" href="./food.html">Food</a> <span class="sep">|</span>
+				<a class="item" href="./02.html">Goal 2</a> <span class="sep">|</span>
+				<a class="item" href="./03.html">Goal 3</a> 
+				<!--span class="sep">|</span-->
+			</div>
+			
+			<!-- Donate button currently hidden 
+			<div>
+			    <a class="inline button" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=R4K4XWA9GWJVJ&currency_code=GBP&source=url">Donate</a>
+			</div>
+			-->
+			
+		</div>
+		
+		<main class="section_padding">
+			<article>
+			
+			<h2 class="top" id="top_title">Goal 1</h2>
+			<p>
+			     Goal 1 is a digital fabrication project with the aim of designing, manufacturing, programming and finishing a binary clock.
+			</p>
+
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>
+
+			<h2 class="" id="contents">Contents</h2>
+			
+			<ol type="A">
+			    <li><a href="#111" class="in_text_link">Pad Thai</a></li>
+				<li><a href="#222" class="in_text_link">Design Ideas</a></li>
+				<li>
+				  <span class="html inline">Production Part I: Programmer</span>
+					<ol class="loweralpha">
+						<li>
+						   <a href="#mcp" class="in_text_link">Microchip Programmer</a>
+							<ol class="roman">
+								<li><a href="#tool" class="in_text_link">Setting up the toolpath with fabmodules.org</a>
+								
+								<ol><li style="list-style-type: circle;"><a href="#downloads1" class="in_text_link">Programmer files for download</a></li></ol>
+								
+								</li>
+								<li><a href="#mods" class="in_text_link">Setting up the toolpath with mods.cba.mit.org</a>
+								
+								<ol><li style="list-style-type: circle;"><a href="#modsfiles" class="in_text_link">Files for download</a></li></ol>
+								
+								</li>
+								<li><a href="#hardware" class="in_text_link">Setting up the hardware</li>
+								<li><a href="#mill" class="in_text_link">Milling and soldering the board</li>
+								<li><a href="#prog" class="in_text_link">Programming the board</a></li>
+							</ol>
+							<li><a href="#run" class="in_text_link">Measuring the Runout</a></li>
+						</li>
+					</ol>
+						
+				</li>
+				<li> <span class="html inline">Production Part II: Electronics Design</span></li>
+				<li> <span class="html inline">Production Part III: Case Design</span></li>
+				<li> <span class="html inline">Production Part IV: Electronics Manufacture</span></li>
+				<li> <span class="html inline">Production Part V: Case Manufacture</span></li>
+				<li> <span class="html inline">Production Part VI: Programming</span></li>
+				<li> <span class="html inline">Production Part VII: Finishing</span></li>
+				<li><a href="#references" class="in_text_link">Evaluation</a></li>
+				<li><a href="#references" class="in_text_link">References</a></li>
+			</ol>
+			
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>	
+			<h2 class="top" id="intro">Introduction</h2>
+			
+				<p>
+				Digital fabrication utilises additive or subtractive manufacturing methods to produce items. In combination with programmable microcontrollers smart products can be created and the instructions for how to make them shared across the world (or potentially across the solar system). Laser cutting and 3D printing are now mainstream elements of rapid prototyping processes, but also substantive manufacturing (D’Aveni, 2015).
+				</p>
+				<p>
+				Henry Ford’s undoubtedly successful vision of millions of identical products rolling off a production line was the manufacturing narrative of the 20th century. The 21st century faces a climate catastrophe that mass production has had no small part in creating. To ship a product from a distant factory when you can download, customise, and manufacture your own gizmo locally seems inefficient at best. Human creation of things must, and will, evolve from mass production to customised manufacturing.
+				</p>
+				<p>
+				My binary clock project is a showcase of an integrated digital fabrication process encapsulating not just the physical manufacture of the circuit and casing, but also the programming of the hardware. Gershenfeld describes this as “not just the creation of three-dimensional structures, but also the integration of logic, sensing, actuation and display - […] everything required for a complete functioning system” (2011).
+				</p>
+				<p>
+				The project outcome is a functioning binary clock with the ability to set the time after a battery change. To achieve this, I will be incorporating a real time clock (RTC) into the circuit to keep time. The time will be displayed by LEDs in a nod back to the Altair 8800 and the revolution in personal micro computing (Old-computers.com, 2020).
+				</p>
+				<p>
+				In both software and fabrication design I have always erred towards the aesthetic considerations. The coding I have done is mostly for the web in HTML, CSS and some JS and PHP for interactive websites. I have done a small amount of carpentry, mostly for garden furniture and small projects. With this project I want to focus more on the physical manufacture of the parts and the design in terms of the operation, rather than the aesthetics. 
+				</p>
+						
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>	
+			<h2 class="top" id="design_ideas">Design Ideas</h2>
+			
+					<p>
+						
+					</p>
+
+<p class="bordered"> <a href="#top_of_the_page" class="in_text_link"><span class="up_arrow">&#x25b2;</span> Back to the top</a></p>
+
+
+			<h2 class="top bordered part title" id="mcp">Production Part I: Microchip Programmer</h2>
+			
+					<p>
+						The ATTiny chip that will run my clock needs to be initialised as the bare metal chip from the factory will not interface with the Arduino IDE. To put a boot program on the chip to allow that I need to build a programmer. My programmer is based on a FabISP in-system programmer. Plugging this small board in between a PC and a freshly minted board allows you to program the microcontroller on the new board. This is only required once, then the new board can be plugged in directly and programmed with Arduino IDE.
+					</p>
+					
+					<h3 id="tool">Setting up the toolpath</h3>
+					<p>
+					    Using Adobe Illustrator I converted the Hello.ISP PNG to a vector using the Image Trace tool. This was so I could tweak the traces and move items around.
+					</p>
+
+<img width="60%" src="../images/goal1/hello.ISP.44.traces.png">
+				
+				<p>
+					For version two I added my own logo using Adobe Illustrator.
+				</p>
+				
+				<img width="60%" src="../images/goal1/pcb_logo_v1.png">
+				
+				<p>
+					For version three I have changed the traces to allow fitment of a 20Mhz resonator as the timing device, rather than the crystals on the original. I have added an 'R' for Robotik and tidied up some of the traces that didn't cut very well due to the computed thickness of the gap between them. The tool could not fit, so Fab Modules did not make a toolpath for that section.
+				</p>
+				
+				<p>Here is the traces image for the PCB:</p>
+				
+				<img width="60%" src="../images/goal1/pcb_logo_v3.png">
+				
+				<p>After preparing the files in Illustrator, I clicked 'File' > 'Export' > 'Export As' and chose .png format. I set the resolution very high, above 1000 dpi to make sure it was good quality when imported into Fab Modules.</p>
+				<img src="../images/goal1/w5_010_export_as.png">
+				
+				<p>Next I went to <a href="https://fabmodules.org" class="in_text_link" target="_blank" rel="noopener">fabmodules.org</a> (I am aware this is the 'old fashioned' way of doing things now. A second process using <a href="http://mods.cba.mit.edu/" class="in_text_link" target="_blank" rel="noopener"> mods.cba.mit.edu</a> follows). When fabmodules.org opens we are presented with the following screen.</p>
+				<p>Click the grey [Input Format] button to choose an input format.</p>
+				<img src="../images/goal1/w5_20_input_format.png">
+				<p>Select .png format from the dropdown.</p>
+				<img src="../images/goal1/w5_40_input_file_to_read.png">
+				<p>Select the correct file and click 'OK'. The file chosen will then load in the work area of the Fab Modules page.</p>
+				<img width="60%" src="../images/goal1/w5_40_trace_png_imported.png">
+				<p>Here you can invert the image if required (white parts stay, with the tool running around the outside of the white shapes). This group of settings appears on the right hand side of the screen - it is worth checking that the displayed measurements match what you are expecting.</p>
+				<img src="../images/goal1/w5_50_input.png">
+				
+				<p>Click on the [Output format] button and choose .rml (Roland mill).</p>
+				<img src="../images/goal1/w5_60_output_format.png">
+				<p>Once selected, the output fields will appear under the size measurements. In the image below these are filled in with the basic settings, to get them I first chose 'MDX-40' from the dropdown menu. This is the closest model to the MDX-50 in the lab. I then manually entered 0 for all except the speed, the zjob and the zhome. The 'zjog' setting here is important, this is the amount the tool will rise above the z origin when traversing the workpiece to a new cutting point. The 3 mm/s speed is the amount that the tool head will move per second, measured in millimeters.</p>
+				<img src="../images/goal1/w5_70_output_fields.png">
+				<p>The next step is to select the type of milling operation, using the 'process' button. The first option is for milling the traces. Our mill has a 0.4mm square end mill for this purpose, currently loaded in the 'Tool 2' slot.</p>
+				<img src="../images/goal1/w5_80_pcb_traces.png">
+				<p>The process fields will appear underneath the output fields once 'PCB Traces 1/64' is selected. The fields are automatically filled (based on the MDX-40 selection above, I think).</p>
+				<img src="../images/goal1/w5_90_process_fields.png">
+				
+				<p>Once the settings look right, press the [Calculate] button to generate the toolpath. Sometimes it can look like nothing is happening, but the tool is working away and the toolpaths will appear in due course.</p>
+				<img src="../images/goal1/w5_90_process_buttons.png">
+				
+				<p>The blue paths are the cuts and the red paths are the traversals at the height specified above.</p>
+				<img  width="60%" src="../images/goal1/w5_90_rml_toolpath.png">
+				
+				<p>Once the toolpath appeared I clicked on 'save' to download the .rml file.</p>
+				<img src="../images/goal1/w5_90_process_buttons.png">
+				
+				<p>The file appears in the download folder when using Chrome on the PC attached to the mill. I cut and pasted this file to my own storage area.</p>
+				<img src="../images/goal1/w5_90_rml_download.png">
+				
+				<p>The software we use to send the job to the mill is the 'vpanel' software that came packaged with the machine. The 'cut' icon shows a tool milling a panel and shrapnel flying out. Click this to open the file dialogue. Click 'delete all' to remove any past jobs. Click 'add' and locate the .rml file.</p>
+				<p>The mill will start as soon as the 'output' button is clicked, so before we do that we need to set up the hardware.</p>
+				
+				<img width="60%" src="../images/goal1/vpanel.jpg">
+			
+				<h2 id="downloads1">Downloads</h2>
+				<p>Click to download a file.</p>
+				<h3>Traces</h3>
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width=".7em" height=".7em" viewBox="0 0 20.78 20.78"><defs><style>.a{fill:#DDD;}.b{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:0.94px;}</style></defs><title>Untitled-1</title><path class="a" d="M288,412.14c-.66-1.29,0-2.35,1.49-2.35h16.35c1.48,0,2.15,1.06,1.49,2.35l-8.46,16.52c-.67,1.29-1.75,1.29-2.42,0Z" transform="translate(-287.29 -409.32)"/><path class="b" d="M288,412.14c-.66-1.29,0-2.35,1.49-2.35h16.35c1.48,0,2.15,1.06,1.49,2.35l-8.46,16.52c-.67,1.29-1.75,1.29-2.42,0Z" transform="translate(-287.29 -409.32)"/></svg>
+					&nbsp;
+					<code class="html inline"><a download="mde_pcb_v3_traces.png" class="in_text_link" href="../files/goal1_programmer/mde_pcb_v3_traces.png">Traces-PNG (13KB)</a></code>
+				</p>
+
+<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width=".7em" height=".7em" viewBox="0 0 20.78 20.78"><defs><style>.a{fill:#DDD;}.b{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:0.94px;}</style></defs><title>Untitled-1</title><path class="a" d="M288,412.14c-.66-1.29,0-2.35,1.49-2.35h16.35c1.48,0,2.15,1.06,1.49,2.35l-8.46,16.52c-.67,1.29-1.75,1.29-2.42,0Z" transform="translate(-287.29 -409.32)"/><path class="b" d="M288,412.14c-.66-1.29,0-2.35,1.49-2.35h16.35c1.48,0,2.15,1.06,1.49,2.35l-8.46,16.52c-.67,1.29-1.75,1.29-2.42,0Z" transform="translate(-287.29 -409.32)"/></svg>
+					&nbsp;
+					<code class="html inline"><a download="mde_pcb_v3_outline.png" class="in_text_link" href="../files/goal1_programmer/mde_pcb_v3_outline.png">Outline-PNG (1KB)</a></code>
+				</p>
+				<h3>RML toolpaths from fabmodules</h3>
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width=".7em" height=".7em" viewBox="0 0 20.78 20.78"><defs><style>.a{fill:#DDD;}.b{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:0.94px;}</style></defs><title>Untitled-1</title><path class="a" d="M288,412.14c-.66-1.29,0-2.35,1.49-2.35h16.35c1.48,0,2.15,1.06,1.49,2.35l-8.46,16.52c-.67,1.29-1.75,1.29-2.42,0Z" transform="translate(-287.29 -409.32)"/><path class="b" d="M288,412.14c-.66-1.29,0-2.35,1.49-2.35h16.35c1.48,0,2.15,1.06,1.49,2.35l-8.46,16.52c-.67,1.29-1.75,1.29-2.42,0Z" transform="translate(-287.29 -409.32)"/></svg>
+					&nbsp;
+					<code class="html inline"><a download="mde_pcb_v3_traces.rml" class="in_text_link" href="../files/goal1_programmer/mde_pcb_v3_traces.rml">Traces-Toolpath (31KB)</a></code>
+				</p>
+				
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width=".7em" height=".7em" viewBox="0 0 20.78 20.78"><defs><style>.a{fill:#DDD;}.b{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:0.94px;}</style></defs><title>Untitled-1</title><path class="a" d="M288,412.14c-.66-1.29,0-2.35,1.49-2.35h16.35c1.48,0,2.15,1.06,1.49,2.35l-8.46,16.52c-.67,1.29-1.75,1.29-2.42,0Z" transform="translate(-287.29 -409.32)"/><path class="b" d="M288,412.14c-.66-1.29,0-2.35,1.49-2.35h16.35c1.48,0,2.15,1.06,1.49,2.35l-8.46,16.52c-.67,1.29-1.75,1.29-2.42,0Z" transform="translate(-287.29 -409.32)"/></svg>
+					&nbsp;
+					<code class="html inline"><a download="mde_pcb_v3_outline.rml" class="in_text_link" href="../files/goal1_programmer/mde_pcb_v3_outline.rml">Outline-Toolpath (34KB)</a></code>
+				</p>				
+				
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>	
+			
+				<h2 id="hardware">Hardware Setup</h2>
+				<h3>Setting up the MDX-50 for PCB Milling</h3>
+				<img width="60%" src="../images/goal1/mdx50_panel.jpg">
+				
+				<p>
+					This is the brass auto Z tool. To automatically set the Z height this tool is placed on top of the workpiece and the tool head is positioned above it (by rotating the dial through the x and y axes), you then move the tool down through the Z axis until it is relatively close to the brass cyclinder (~3cm) to negate having to watch it move very slowly when running automatically. The tool tip will move down automatically until it touches the top of the brass cylinder - a low voltage is passed through the brass cyclinder and as the tool touches the top of the cylinder a circuit is completed, stopping the chuck immediately. The machine then calculates the Z origin based on the height of the cylinder and zeros it to the top of the workpiece.
+				</p>
+				<img width="60%" src="../images/goal1/mdx50_autoZ.jpg">
+				
+				<p>
+					This is the auto Z tool in place on the workpiece. The wax block is the sacrificial and the copper board is destined to be a PCB. The cable running from the tool to the tool stand allows the machine to detect when it touches the brass. 
+				</p>
+				<img width="60%" src="../images/goal1/mdx50_autoZwax.jpg">
+				
+				<h2 id="mill">Milling and soldering</h2>
+				<h3>Making the board</h3>
+				<p>The video below shows the MDX-50 at work. The sacrificial wax block below the copper was surfaced to make it flat.</p>
+				
+				<iframe class="video" src="https://player.vimeo.com/video/310047099?muted=1&autoplay=1&loop=1&autopause=0" width="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+				<p>
+					Here's the milled board, just before cleaning. This is a photo of the first attempt at the board. The one shown later in the final image is slightly different.
+				</p>
+				<img width="60%" src="../images/goal1/mdx50_boardv2.jpg">
+				<p>
+					While soldering the parts it was useful to use a piece of double-sided tape to keep the small surface mount parts neat and tidy while working. 
+				</p>
+				<img width="60%" src="../images/goal1/surface_mount_technique.jpg">
+				<p>
+					I have soldered a couple of times before, but only to repair things or make very basic kits. Here's my first attempt at soldering the board.
+				</p>
+				<img width="60%" src="../images/goal1/surface_mount_WIP.jpg">
+				
+				<p>
+					I ended up burning the board when soldering and desoldered the parts. I milled another board, this time removing all the copper between the traces and fixing the crystal. I then soldered this board. Some of the joints are 'smooth &amp; shiny' and some, well, some are not! 
+				</p>
+				
+				<p>Here is the final PCB next to a 20p coin for size comparison:</p>
+				<img width="60%" src="../images/goal1/final_pcb_sized.jpg">
+				
+				<p>
+					After soldering the board I tested all the joints and traces with a multimeter in <a href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/continuity" class="in_text_link" target="_blank" rel="noopener">continuity mode</a>. The board caused beeps in all the right places!
+				</p>
+
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>				
+				
+				<h2 id="prog">Programming the board</h2>
+				<h3>Using another programmer</h3>
+				<p>
+					The next task was to program the board. I made a ribbon cable with 6 cores to connect the ISP headers from this programmer to the lab programmer.
+				</p>
+				
+				<img width="60%" src="../images/goal1/programmer_wires.jpg"/>
+				
+				<p>I then followed <a href="http://archive.fabacademy.org/archives/2017/doc/programming_FabISP.html" class="in_text_link">this tutorial</a>.</p>
+				
+				<p>I'm using a Linux laptop and another programmer of the same type that was made by a colleague, Luiz. My Linux distro already had AVRdude and GCC installed, so I skipped those parts of the tutorial.</p>
+				<p>The tutorial suggests using the following command to fetch the firmware, but I couldn't get it to work. I used the Mac firmware link instead.</p>
+				<code class="cmd"><span class="root">$ </span>wget http://academy.cba.mit.edu/classes/embedded_programming/firmware.zip</code>
+				
+				<p>I connected the working programmer and my raw programmer board to my laptop via USB and then connected the two with the ribbon cable. As per the tutorial, I then edited the makefile using:</p>
+				<code class="cmd"><span class="root">$ </span>nano makefile</code>
+				<p>I switched out the AVRISP2 line for the USBTINY line by shifting the '#' comment marker to the other line, commenting out the AVRISP2 line. Wrote out the makefile using [CTRL]+[O} in nano, then used {CTRL}+{X] to exit. Next, on the command line, I gave the following commands:</p>
+				<code class="cmd"><span class="root">$ </span>make clean</code><br>
+				<code class="cmd"><span class="root">$ </span>make hex</code><br>
+				<code class="cmd"><span class="root">$ </span>make fuse</code><br>
+				<p>This was a very easy process for me and my programmer worked the first time I tried it (avrdude done.  Thank you). This does not seem to be the case with other Fab Academics(?), so I think I have been very lucky. I checked the programmer by using the list usb command:</p>
+				<code class="cmd"><span class="root">$ </span>lsusb</code>
+				<p>This gives a list of all the USB devices connected, which now includes a line for my FABisp programmer:</p>
+				<code class="cmd">Bus 002 Device 004: ID 1781:0c9f Multiple Vendors USBtiny</code>
+				<p>I desoldered the 0ohm resistor to the top left of the ATtiny44 chip in the image below (compare the image with the 20p above to see which resistor is removed) and my programmer is finished.</p>
+				<img src="../images/goal1/prog_and_board.jpg"/>
+				
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>
+
+				<h2 id="run">Measuring the Runout</h2>
+				<h3>Dial Test Indicator</h3>
+				
+				<p>
+					The wonderful Adam, a technician that runs a much more accurate CNC machine at the University came down to the Fab Lab and shared some of his expertise with us. He brought three tools:
+					<ul>
+						<li>A Dial Test Indicator</li>
+						<li>A micrometer</li>
+						<li>An eyeglass</li>
+					</ul>
+					The	DTI (Dial Test Indicator) can measure down to 10 microns. A micron is short for micrometre (a millionth of a metre). Essentially it is a gauge with a magnetic base to attach it to the machine securely. At the top it has a small ball mounted on a moveable arm that is pushed against the inside of the spindle for the first measurement. It needs to make physical contact with the tube inside the spindle. Adam then rotated the spindle by hand, just pushing it around a few times, and made a reading from the gauge. The 'high point' is the point at which the runout is the worst.
+				</p>
+				<img width="60%" src="../images/goal1/dti.jpg" alt="Dial Test Indicator.">
+				<p>The micrometer is an accurate screw gauge measure, more accurate than the digital calipers we have in the lab.</p>
+				<img width="60%" src="../images/goal1/micrometer.jpg" alt="Micrometer.">
+				<p>The eyeglass is a lens mounted in a plastic ring - it magnified the tools to the point where we could see the wear on the flutes. Looking at the specs for the Eschenbach 11247 it provides 7x magnification with a 25mm lens and Eschenbach call it a watchmaker's loupe.</p>
+				<img width="30%" src="../images/goal1/eyeglass.png" alt="Eschenbach loupe.">
+				<h3>Results</h3>
+				<p>With no tool or collet mounted in the spindle Adam measured the error to +/- 0.18mm (180 microns) which seems a small amount to me, but did not impress Adam! He suggested that the tool may have been engineered to compensate for the single sided grub screw collet, so we mounted a tool in the collet and measured the runout with the DTI touching the outside of the tool.</p>
+				<p>The new measurement was +/- 0.06 (60 microns), so a third of the error measured with jsut the spindle. This is the total, if we were to express this to others it would be 30 micron runout or 0.03 mm. On a 0.2mm tool this is a significant amount of runout.</p>
+				<p>
+				Adam's general advice was to run the spindle at the highest speed (for our MDX-50 that is 15000 rpm, which Adam considered slow) and to use single or double flute cutters at that speed. Slowing down the feed would also make cleaner cuts.
+				</p>
+				
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>
+<h2 class="top bordered part title" id="partII">Production Part II: Electronics Design</h2>
+				<p>Placeholder for this part.<p>
+
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>
+<h2 class="top bordered part title" id="partIII">Production Part III: Case Design</h2>
+				<p>Placeholder for this part.<p>
+				
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>
+<h2 class="top bordered part title" id="partIV">Production Part IV: Electronics Manufacture</h2>
+				<p>Placeholder for this part.<p>
+				
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>
+<h2 class="top bordered part title" id="partV">Production Part V: Case Manufacture</h2>
+				<p>Placeholder for this part.<p>
+				
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>
+<h2 class="top bordered part title" id="partVI">Production Part VI: Programming</h2>
+				<p>Placeholder for this part.<p>
+				
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>
+<h2 class="top bordered part title" id="partVII">Production Part VII: Finishing</h2>
+				<p>Placeholder for this part.<p>
+
+
+<p class="bordered">&#x25b2; <a href="#top_of_the_page" class="in_text_link">Back to the top</a></p>
+				<h2 id="references">
+					References
+				</h2>
+				<h3>Online</h3>
+				<ul class="ref">
+					<li>CNCCookbook: Be A Better CNC'er. (2018). <a href="https://www.cnccookbook.com/g54-g92-g52-work-offsets-cnc-g-code/" class="in_text_link" target="_blank" rel="noopener"><em>G54, G52, &amp; G92 G-Codes: Work Offsets &amp; CNC Fixtures Made Easy.</em></a> [online] Available at: https://www.cnccookbook.com/g54-g92-g52-work-offsets-cnc-g-code/ [Accessed 5 Nov. 2018].</li>
+					
+					<li>D’Aveni, R., 2015. The 3-D Printing Revolution. [online] Harvard Business Review. Available at: <https://hbr.org/2015/05/the-3-d-printing-revolution> [Accessed 5 November 2020].</li>
+					
+					<li>Gershenfeld, N., 2011. Fab: The coming revolution on your desktop – from personal computers to personal fabrication. New York: Basic Books.</li>
+					
+					<li>Oskay, W. (2018). Basics: Finding Pin 1 | Evil Mad Scientist Laboratories. [online] <a href="https://www.evilmadscientist.com/2010/basics-finding-pin-1/" class="in_text_link" target="_blank" rel="noopener">Evilmadscientist.com</a>. Available at: https://www.evilmadscientist.com/2010/basics-finding-pin-1/ [Accessed 30 Mar. 2018].</li>
+				</ul>
+				
+				<h3>Offline</h3>
+				<ul class="ref">
+					<li>Nussey, J. (2013). Arduino for Dummies. John Wiley &amp; Sons, Ltd., Chichester, West Sussex, UK, 2013.</li>
+					<li>Old-computers.com. 2020. Altair 8800: The Museum. [online] Available at: <https://www.old-computers.com/museum/computer.asp?c=62&st=1> [Accessed 9 November 2020].</li>
+				</ul>
+				<h3>Images</h3>
+				<ul class="ref">
+					<li>PeplerOptics, (2019). <em>Eschenbach Loupe</em> [ONLINE]. Available at: <a href="https://www.pepleroptics.com/index.php/eschenbach-watchmaker-loupe-7x.html" class="in_text_link" target="_blank" rel="noopener">Eschenbach Watchmaker Loupe (7x)</a> [Accessed 17 February 2019].</li>
+				</ul>
+			</article>
+		</main>
+		
+		<footer>
+<p><a href="#top_of_the_page" class="in_text_link"><span class="up_arrow">&#x25b2;</span> Back to the top</a></p><br>
+			<span id="footer_text">	&copy; 2020 kitobor. This work is licensed under a <a target="_blank" rel="noopener" class="licence_link" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span>
+			<br><br>
+				
+				<div class="sec_nav left copy">
+				
+				</div>
+				
+			<div class="sec_nav">
+				<a class="item" href="../index.html">Home</a> <span class="sep">|</span>
+				<a class="item" href="01.html">Goal 1</a> <span class="sep">|</span>
+				<a class="item" href="02.html">Goal 2</a> <span class="sep">|</span>
+				<a class="item" href="03.html">Goal 3</a> 
+				<!--span class="sep">|</span-->
+			</div>
+			
+		</footer>
+	</div>
+
+	</body>
+</html>
