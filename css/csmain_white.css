@@ -5,7 +5,7 @@
 		padding: 1em .75em;
 		grid-area: hd;
 		font-family: 'Poppins', sans-serif;
-		font-size: 2rem;
+		font-size: 1.3rem;
 	}
 	
 	header h5 {
@@ -38,6 +38,21 @@
 	
 	img:not(.noborder) {
 		border: 1px solid #999;
+	}
+
+/* Image floating */
+	.floater {
+		float: right;
+		margin-left: 2em;
+		border-radius:1em;
+	}
+
+	.floater.end {
+		clear: right;
+	}
+
+	.pushDown {
+		clear:both;
 	}
 	
 	video:not(.noborder) {
@@ -278,19 +293,7 @@
 		margin: 0;
 		padding-bottom: 1em;
 	}
-	
-/* Image floating */
-	.floater {
-		float: left;
-	}
 
-	.floater.end {
-		clear: right;
-	}
-
-	.pushDown {
-		clear:both;
-	}
 
 /* List floating */
 	.ref {
